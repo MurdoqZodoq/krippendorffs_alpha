@@ -43,7 +43,7 @@ def nu(m, e):
 def alpha(delta, R, U):
     '''Krippendorff's Alpha'''
     # Eliminate uncomparable result sets
-    U = {u for u in U if len(u) > 1}
+    U = [u for u in U if len(u) > 1]
     # Construct the multiset of all comparable elements
     V = []
     for u in U:
